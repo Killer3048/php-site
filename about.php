@@ -56,5 +56,5 @@ require("lib/connect.php"); // Подключение "connect.php ", библи
 		</div>
 	</form>
 
-
+	<script src="static/script.js"></script>
 </body>

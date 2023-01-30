@@ -57,4 +57,13 @@ require("lib/connect.php"); // Подключение "connect.php ", библи
 	</form>
 
 	<script src="static/script.js"></script>
+
+	<script>
+const btn = document.querySelector('.form__btn');
+btn.addEventListener('click', function() {
+    btn.style.width = '40%';
+    btn.style.padding = '5px 10px';
+    btn.style.backgroundColor = '#6F6F6F';
+});
+</script>
 </body>

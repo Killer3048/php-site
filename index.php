@@ -13,7 +13,7 @@
 <body class="body">
 
 <header class="header">
-  <a href="#" class="header__logo"><img class="header__logo-image" src="static/images/logo.png" alt="Карачаевск"></a>
+  <a href="#" class="header__logo"><img class="header__logo-image" src="static/images/logo.svg" alt="лого"></a>
   <nav class="header__nav">
     <ul class="header__menu">
       <li class="header__menu-item">

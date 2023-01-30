@@ -1,23 +1,27 @@
 <?php
 require("connect.php"); // Подключение к БД
 
-if (isset($_POST['id']) && isset($_POST['info']) && isset($_POST['tooinfo'])) { // Проверка, есть ли все необходимые POST-данные (id, info и tooinfo)
+if (isset($_POST['id'])) { // Check if id is set in the POST data
 
+	$id = mysqli_real_escape_string($db, $_POST['id']); // Save the id from the POST data and escape it
+	$info = mysqli_real_escape_string($db, $_POST['info']); // Save and escape info from the POST data
+	$tooinfo = mysqli_real_escape_string($db, $_POST['tooinfo']); // Save and escape tooinfo from the POST data
 
-	$id = mysqli_real_escape_string($db, $_POST['id']); // Сохранение идентификатора из данных POST
-	$info = mysqli_real_escape_string($db, $_POST['info']); // Сохранение идентификатора из данных POST
-	$tooinfo = mysqli_real_escape_string($db, $_POST['tooinfo']); // Экранирование и сохранение идентификатора из данных POST
+	if (isset($_POST['delete'])) { // Check if delete button was pressed
+		$query = "DELETE FROM persons WHERE id='$id'"; // SQL query to delete data from the database
 
+		mysqli_query($db, $query); // Execute the query
+		header("Location: /ejuiks/index.php"); // Redirect to the index page
 
+		exit; // Exit
 
+	} elseif (isset($_POST['info']) && isset($_POST['tooinfo'])) { // Check if info and tooinfo are set in the POST data
 
-	$query = "UPDATE persons SET info='$info', tooinfo='$tooinfo' WHERE id='$id'"; // SQL-запрос для обновления данных в бд
-    mysqli_query($db, $query); // Выполнение запроса
+		$query = "UPDATE persons SET info='$info', tooinfo='$tooinfo' WHERE id='$id'"; // SQL query to update data in the database
+		mysqli_query($db, $query); // Execute the query
+		header("Location: /ejuiks/about.php?id=$id"); // Redirect to the about page with the specified id
 
-
-
-    
-	header("Location: /ejuiks/about.php?id=$id"); // Редирект на страницу с выводом по одному, с указанным идентификатором
-	exit; //выход.
+		exit; // Exit
+	}
 }
 ?>

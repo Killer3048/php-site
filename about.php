@@ -7,8 +7,6 @@
 
 
 <body class="body">
-	
-
 <?php
 require("lib/connect.php"); // Подключение "connect.php ", библиотека для установления соединения с базой данных
     $id = $_GET['id']; //Присвоите значение "id" из строки запроса URL переменной "$id"
@@ -46,12 +44,17 @@ require("lib/connect.php"); // Подключение "connect.php ", библи
   </table>
 
 
-	<form class="form" action="lib/edit.php" method="post">
+  <form class="form" action="lib/edit.php" method="post">
 	    <h2 class="form__title">Форма редактирования</h2>
 		<input class="form__input" type="hidden" name="id" value="<?= $one['id'] ?>">
 		<input class="form__input" type="text" name="info" value="<?= $one['info'] ?>" placeholder="Изменить инфо">
 		<input class="form__input" type="text" name="tooinfo" value="<?= $one['tooinfo'] ?>" placeholder="Изменить туинфо">
-		<button class="form__btn form__submit" type="submit">Сохранить</button>
+		
+		<div class="buttons">
+			<button class="form__btn form__submit" type="submit">Сохранить</button>
+			<button class="form__btn form__delete" type="submit" name="delete">Удалить</button>
+		</div>
 	</form>
+
 
 </body>

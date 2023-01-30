@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <h2 class="form__title">Форма добавления</h2>
     <input class="form__input" type="text" name="info" placeholder="Введите info" required>
     <input class="form__input" type="text" name="tooinfo" placeholder="Введите tooinfo">
-    <input class="form__submit" type="submit" value="Добавить">
+    <input class="form__btn" type="submit" value="Добавить">
 </form>
 
     <table class="table">

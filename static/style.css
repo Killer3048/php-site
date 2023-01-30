@@ -2,10 +2,11 @@
     max-width: 1920px;
     background-color: #191919;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', 'Open Sans', sans-serif;
 }
 
 .header {
+    max-width: 100%;
     background-color: #2f2f2f;
     display: flex;
     align-items: center;
@@ -32,13 +33,14 @@
   }
   
   .header__nav {
-    max-width: 80%;
+    max-width: 90%;
     display: flex;
     justify-content: space-between;
   }
   
   
   .header__menu {
+    max-width: 100%;
     display: flex;
     list-style: none;
     margin: 0;
@@ -46,12 +48,15 @@
   }
   
   .header__menu-item {
+    max-width: 50%;
+    width: 100%;
     margin-right: 20px;
   }
   
   .header__menu-link {
     color: #fff;
     text-decoration: none;
+    font-size: 24px;
   }
 
   .header__menu-link:hover{

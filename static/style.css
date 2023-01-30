@@ -1,13 +1,8 @@
-/* General styles */
-
 .body {
     background-color: #191919;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
 }
-
-
-/* Table styles */
 
 .table {
     width: 80%;
@@ -33,12 +28,18 @@
     text-align: center;
 }
 
+.table__link {
+    color: white;
+    text-decoration: none;
+}
+
+.table__link:hover {
+    opacity: 0.5;
+}
+
 .table__cell--head {
     font-weight: bold;
 }
-
-
-/* Form styles */
 
 .form {
     max-width: 60%;
@@ -46,7 +47,7 @@
     padding: 20px;
     border-radius: 5px;
     background-color: #2F2F2F;
-    box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 20px #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,9 +82,6 @@
     border-bottom: 2px solid #00bfff;
 }
 
-
-/* Placeholder styles */
-
 .form__input::-webkit-input-placeholder {
     color: #bbb;
     font-size: 14px;
@@ -98,9 +96,6 @@
     font-size: 10px;
     color: rgb(140, 140, 140);
 }
-
-
-/* Submit button styles */
 
 .form__submit {
     width: 90%;

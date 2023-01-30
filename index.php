@@ -11,7 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="body">
-
 <form class="form" action="lib/add.php" method="post">
     <h2 class="form__title">Форма добавления</h2>
     <input class="form__input" type="text" name="info" placeholder="Введите info" required>
@@ -35,6 +34,7 @@
                 <th class="table__cell table__cell--head">ID</th>
                 <th class="table__cell table__cell--head">ИНФО</th>
                 <th class="table__cell table__cell--head">ТУИНФО</th>
+                <th class="table__cell table__cell--head">Ссылка</th>
             </tr>
         </thead>
         <tbody class="table__body">
@@ -45,6 +45,7 @@
                 <td class="table__cell"> <?= empty($val['id']) ? "Нет данных" : $val['id'] ?></td>
                 <td class="table__cell"> <?= empty($val['info']) ? "Нет данных" : $val['info'] ?></td>
                 <td class="table__cell"> <?= empty($val['tooinfo']) ? "Нет данных" : $val['tooinfo'] ?></td>
+                <td class="table__cell"><a class="table__link" href="about.php?id=<?=$val['id']?>">Нажми</a></td>
             </tr>
             <?php
             }

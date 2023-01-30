@@ -11,7 +11,7 @@ if (isset($_POST['id'])) { // Check if id is set in the POST data
 		$query = "DELETE FROM info WHERE id='$id'"; // SQL query to delete data from the database
 
 		mysqli_query($db, $query); // Execute the query
-		header("Location: /ejuiks/index.php"); // Redirect to the index page
+		header("Location: /index.php"); // Redirect to the index page
 
 		exit; // Exit
 
@@ -19,7 +19,7 @@ if (isset($_POST['id'])) { // Check if id is set in the POST data
 
 		$query = "UPDATE info SET info='$info', tooinfo='$tooinfo' WHERE id='$id'"; // SQL query to update data in the database
 		mysqli_query($db, $query); // Execute the query
-		header("Location: /ejuiks/about.php?id=$id"); // Redirect to the about page with the specified id
+		header("Location: /about.php?id=$id"); // Redirect to the about page with the specified id
 
 		exit; // Exit
 	}

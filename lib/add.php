@@ -13,6 +13,6 @@ if(!$add){
     die('error add' . mysqli_error($db));
 }
 
-header('Location: /ejuiks/index.php');
+header('Location: /index.php');
 exit();
 ?>

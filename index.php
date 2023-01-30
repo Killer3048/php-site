@@ -30,9 +30,6 @@
       </li>
     </ul>
   </nav>
-  <button class="header__toggle-button">
-    <span class="header__toggle-icon"></span>
-  </button>
 </header>
 
 <form class="form" action="lib/add.php" method="post">

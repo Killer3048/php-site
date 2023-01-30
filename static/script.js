@@ -5,7 +5,3 @@ btn.addEventListener('click', function() {
     btn.style.backgroundColor = '#6F6F6F';
 });
 
-const link = document.querySelector('.header__menu-item')
-link.addEventListener('click', function(){
-  link.style.borderBottom = '1px solid white';
-})

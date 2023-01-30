@@ -17,16 +17,16 @@
   <nav class="header__nav">
     <ul class="header__menu">
       <li class="header__menu-item">
-        <a href="#" class="header__menu-link">Home</a>
+        <a href="#" class="header__menu-link">Главная</a>
       </li>
       <li class="header__menu-item">
-        <a href="#" class="header__menu-link">About</a>
+        <a href="#" class="header__menu-link">О нас</a>
       </li>
       <li class="header__menu-item">
-        <a href="#" class="header__menu-link">Services</a>
+        <a href="#" class="header__menu-link">Сервис</a>
       </li>
       <li class="header__menu-item">
-        <a href="#" class="header__menu-link">Contact</a>
+        <a href="#" class="header__menu-link">Контакты</a>
       </li>
     </ul>
   </nav>

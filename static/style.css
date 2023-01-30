@@ -5,6 +5,75 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.header {
+    background-color: #2f2f2f;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .header__logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: auto;
+  }
+  
+  .header__nav {
+    display: none;
+  }
+  
+  .header__menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header__menu-item {
+    margin-right: 20px;
+  }
+  
+  .header__menu-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .header__toggle-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+.header__toggle-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .header__toggle-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%2211%22%20y%3D%223%22%20width%3D%2211%22%20height%3D%2214%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%2211%22%20height%3D%2214%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2211%22%20width%3D%2211%22%20height%3D%2214%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  @media (max-width: 768px) {
+    .header__nav {
+      display: block;
+    }
+    .header__menu {
+      display: none;
+    }
+  }
+
 .title {
     text-align: center;
 }

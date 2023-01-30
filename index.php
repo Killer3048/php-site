@@ -37,7 +37,7 @@
 
 <form class="form" action="lib/add.php" method="post">
     <h2 class="form__title">Форма добавления</h2>
-    <input class="form__input" type="text" name="info" placeholder="Введите info" required>
+    <input class="form__input" type="text" name="info" placeholder="Введите info">
     <input class="form__input" type="text" name="tooinfo" placeholder="Введите tooinfo">
     <input class="form__btn form__submit" type="submit" value="Добавить">
 </form>

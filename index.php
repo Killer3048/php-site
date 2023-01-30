@@ -11,13 +11,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="body">
+
+<header class="header">
+  <a href="#" class="header__logo">My</a>
+  <nav class="header__nav">
+    <ul class="header__menu">
+      <li class="header__menu-item">
+        <a href="#" class="header__menu-link">Home</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="#" class="header__menu-link">About</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="#" class="header__menu-link">Services</a>
+      </li>
+      <li class="header__menu-item">
+        <a href="#" class="header__menu-link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="header__toggle-button">
+    <span class="header__toggle-icon"></span>
+  </button>
+</header>
+
 <form class="form" action="lib/add.php" method="post">
     <h2 class="form__title">Форма добавления</h2>
     <input class="form__input" type="text" name="info" placeholder="Введите info" required>
     <input class="form__input" type="text" name="tooinfo" placeholder="Введите tooinfo">
-    <input class="form__btn" type="submit" value="Добавить">
+    <input class="form__btn form__submit" type="submit" value="Добавить">
 </form>
-
     <table class="table">
     <?php
         require "lib/connect.php";

@@ -32,12 +32,16 @@
   </nav>
 </header>
 
-<form class="form" action="lib/add.php" method="post">
-    <h2 class="form__title">Форма добавления</h2>
-    <input class="form__input" type="text" name="info" placeholder="Введите info">
-    <input class="form__input" type="text" name="tooinfo" placeholder="Введите tooinfo">
-    <input class="form__btn form__submit" type="submit" value="Добавить">
-</form>
+    <form class="form" action="lib/add.php" method="post">
+        <h2 class="form__title">Форма добавления</h2>
+        <input class="form__input" type="text" name="info" placeholder="Введите info">
+        <input class="form__input" type="text" name="tooinfo" placeholder="Введите tooinfo">
+        <input class="form__btn form__submit" type="submit" value="Добавить">
+    </form>
+
+    <form class='form__deleteAll' action="lib/deleteAll.php" method="post">
+        <button class='btn__deleteAll' type="submit" value="">Удалить всё</button>
+    </form>
     <table class="table">
     <?php
         require "lib/connect.php";
@@ -57,8 +61,7 @@
                 <th class="table__cell table__cell--head">Ссылка</th>
             </tr>
         </thead>
-        <tbody class="table__body">
-            <?php
+        <?php
             foreach($all as $val){
             ?>
             <tr class="table__row">

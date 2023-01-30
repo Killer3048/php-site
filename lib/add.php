@@ -5,7 +5,7 @@ require "connect.php";
 $info = $_POST["info"]; 
 $tooinfo = $_POST["tooinfo"];
 
-$queryAdd = "INSERT INTO `persons`( `id`,`info`, `tooinfo` ) values (NULL, '$info','$tooinfo')"; 
+$queryAdd = "INSERT INTO `info`( `id`,`info`, `tooinfo` ) values (NULL, '$info','$tooinfo')"; 
 $add = mysqli_query($db, $queryAdd);
 
 

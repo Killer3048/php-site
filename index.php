@@ -21,7 +21,7 @@
     <table class="table">
     <?php
         require "lib/connect.php";
-        $queryAll = "SELECT * from `persons` ";
+        $queryAll = "SELECT * from `info` ";
         $all = mysqli_query($db, $queryAll);
         if (!$all) {
             die("Error fetching data: " . mysqli_error($db));

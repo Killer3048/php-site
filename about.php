@@ -11,7 +11,7 @@
 require("lib/connect.php"); // Подключение "connect.php ", библиотека для установления соединения с базой данных
     $id = $_GET['id']; //Присвоите значение "id" из строки запроса URL переменной "$id"
 
-	$queryOne = "SELECT * FROM persons WHERE id = '$id'"; //Выполните SQL-запрос для выбора всех столбцов из таблицы "persons", где "id" равно "$id"
+	$queryOne = "SELECT * FROM info WHERE id = '$id'"; //Выполните SQL-запрос для выбора всех столбцов из таблицы "info", где "id" равно "$id"
 	$one = mysqli_query($db, $queryOne);
 	$one = mysqli_fetch_assoc($one); // Извлечение первой строки результата запроса в виде ассоциативного массива и сохранение ее в переменной "$one"
 	if(!$one){

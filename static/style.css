@@ -46,6 +46,7 @@
     font-weight: bold;
 }
 
+
 .form {
     max-width: 60%;
     margin: 100px auto;
@@ -126,6 +127,8 @@
 
 .form__btn:hover {
     background-color: #6F6F6F;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .form__delete {
@@ -134,10 +137,13 @@
 
 .form__delete:hover {
     background-color: rgb(125, 8, 8);
-    ;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .table {
+        width: 100%;
+        }
+
     .form {
         max-width: 90%;
     }
@@ -149,7 +155,7 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .form__title {
         font-size: 20px;
     }
@@ -169,3 +175,4 @@
         gap: 20px;
     }
 }
+

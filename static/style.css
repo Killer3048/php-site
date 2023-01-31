@@ -11,52 +11,51 @@
     display: flex;
     align-items: center;
     padding: 20px;
-  }
-  
-  .header__logo {
+}
+
+.header__logo {
     color: #fff;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     margin-right: auto;
-  }
+}
 
-  .header__logo-image{
+.header__logo-image {
     max-width: 142px;
     object-fit: cover;
-  }
-  
-  .header__nav {
+}
+
+.header__nav {
     max-width: 90%;
     display: flex;
     justify-content: space-between;
-  }
-  
-  
-  .header__menu {
+}
+
+.header__menu {
     max-width: 100%;
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     gap: 20px;
-  }
-  
-  .header__menu-item {
+}
+
+.header__menu-item {
     max-width: 50%;
     width: 100%;
-  }
-  
-  .header__menu-link {
+}
+
+.header__menu-link {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
-  }
+}
 
-  .header__menu-link:hover{
+.header__menu-link:hover {
     opacity: 0.6;
-  }
-  
+}
+
 .title {
     text-align: center;
 }
@@ -97,7 +96,6 @@
 .table__cell--head {
     font-weight: bold;
 }
-
 
 .form {
     max-width: 60%;
@@ -190,7 +188,7 @@
     background-color: rgb(125, 8, 8);
 }
 
-.form__deleteAll{
+.form__deleteAll {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,12 +196,12 @@
     margin-bottom: 20px;
 }
 
-.btn__deleteAll{
+.btn__deleteAll {
     width: 60%;
     padding: 12px 20px;
     border-radius: 5px;
     border: none;
-    background-color:  rgb(76, 17, 17);
+    background-color: rgb(76, 17, 17);
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
@@ -216,51 +214,40 @@
     background-color: rgb(125, 8, 8);
 }
 
-
 @media (max-width: 768px) {
-    
     .header__logo-image {
         max-width: 150px;
-      }
-    
+    }
     .header__menu-item {
-      max-width: 100%;
+        max-width: 100%;
     }
-    
     .header__menu-link {
-      font-size: 18px;
+        font-size: 18px;
     }
-    
     .table {
-      width: 100%;
+        width: 100%;
     }
-    
     .form {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
-  @media (max-width: 540px) {
-    .header__logo-image {
-      display: none
-    }
+}
 
-    .header__nav{
+@media (max-width: 540px) {
+    .header__logo-image {
+        display: none
+    }
+    .header__nav {
         max-width: 100%;
         justify-content: space-between;
         gap: 0;
     }
-    
     .header__menu-item {
-      max-width: 100%;
-
+        max-width: 100%;
     }
-    
     .header__menu-link {
-      font-size: 14px;
+        font-size: 14px;
     }
-    
     .form__input {
-      width: 90%;
+        width: 90%;
     }
-  }
+}

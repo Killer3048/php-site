@@ -1,27 +1,31 @@
 <?php
-require("connect.php"); // Подключение к БД
+// Подключение к базе данных
+require("connect.php");
 
-if (isset($_POST['id'])) { // Check if id is set in the POST data
+// Проверка, задан ли id в данных POST
+if (isset($_POST['id'])) { 
+	$id = mysqli_real_escape_string($db, $_POST['id']); // Сохранение id из данных POST и экранирование его
+	$info = mysqli_real_escape_string($db, $_POST['info']); // Сохранение и экранирование info из данных POST
+	$tooinfo = mysqli_real_escape_string($db, $_POST['tooinfo']); // Сохранение и экранирование tooinfo из данных POST
+	
+	// Проверка, была ли нажата кнопка "удалить"
+	if (isset($_POST['delete'])) { 
+		
+		$query = "DELETE FROM info WHERE id='$id'"; // SQL-запрос для удаления данных из базы данных
+		mysqli_query($db, $query); // Выполнение запроса
+		header("Location: /php-site/index.php"); // Редирект на страницу индекса
+		
+		exit; // Выход
+	} 
 
-	$id = mysqli_real_escape_string($db, $_POST['id']); // Save the id from the POST data and escape it
-	$info = mysqli_real_escape_string($db, $_POST['info']); // Save and escape info from the POST data
-	$tooinfo = mysqli_real_escape_string($db, $_POST['tooinfo']); // Save and escape tooinfo from the POST data
 
-	if (isset($_POST['delete'])) { // Check if delete button was pressed
-		$query = "DELETE FROM info WHERE id='$id'"; // SQL query to delete data from the database
+// Проверка, заданы ли info и tooinfo в данных POST в форме  редактирования
+elseif (isset($_POST['info']) && isset($_POST['tooinfo'])) {
 
-		mysqli_query($db, $query); // Execute the query
-		header("Location: /index.php"); // Redirect to the index page
+	$query = "UPDATE info SET info='$info', tooinfo='$tooinfo' WHERE id='$id'"; // SQL-запрос для обновления данных в базе данных
+	mysqli_query($db, $query); // Выполнение запроса
+	header("Location: /php-site/about.php?id=$id"); // Перенаправление на страницу "about" с указанным идентификатором
 
-		exit; // Exit
-
-	} elseif (isset($_POST['info']) && isset($_POST['tooinfo'])) { // Check if info and tooinfo are set in the POST data
-
-		$query = "UPDATE info SET info='$info', tooinfo='$tooinfo' WHERE id='$id'"; // SQL query to update data in the database
-		mysqli_query($db, $query); // Execute the query
-		header("Location: /about.php?id=$id"); // Redirect to the about page with the specified id
-
-		exit; // Exit
+	exit; // Выход
 	}
-}
-?>
+	}

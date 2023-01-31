@@ -1,7 +1,7 @@
 <?php
 require("connect.php"); // Подключение к БД
 
-header("Location: /index.php"); // Redirect to the about page with the specified id
+header("Location: /php-site/index.php"); // Редирект
 
 $sql = "DELETE FROM info";
 $result = mysqli_query($db, $sql);

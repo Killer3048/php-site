@@ -33,7 +33,7 @@
     </nav>
   </header>
 
-  <section class='modal-container'>
+ <!-- <section class='modal-container'>
     <div class="modal" id="modal">
       <div class='question' id="question">Ты гей ?</div>
       <div class="buttons">
@@ -44,7 +44,7 @@
     <div class="gay-container">
       <img class="gay" src="https://sun9-76.userapi.com/c304907/u35479/-6/w_57083d2b.jpg" alt="gay">
     </div>
-  </section>
+  </section> -->
 
   <form class="form" action="lib/add.php" method="post">
     <h2 class="form__title">Форма добавления</h2>
@@ -53,8 +53,8 @@
     <input class="form__btn form__submit" type="submit" value="Добавить">
   </form>
 
-  <form class='form__btn form__deleteAll' action="lib/deleteAll.php" method="post">
-    <button class='btn__deleteAll' type="submit" value="">Удалить всё</button>
+  <form class=' form__deleteAll' action="lib/deleteAll.php" method="post">
+    <button class='form__btn btn__deleteAll' type="submit" value="">Удалить всё</button>
   </form>
   <table class="table">
     <?php

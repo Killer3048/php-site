@@ -1,15 +1,18 @@
 const btn = document.querySelector(".form__btn");
+const btnDeleteAll = document.querySelector(".btn__deleteAll")
+
 // const modal = document.getElementById("modal");
 // const yesBtn = document.querySelector(".yes-btn");
 // const noBtn = document.querySelector(".no-btn");
 // const gay = document.querySelector(".gay");
 
 
-btn.addEventListener("click", function () {
-  btn.style.width = "40%";
-  btn.style.padding = "5px 10px";
-  btn.style.backgroundColor = "#6F6F6F";
+btn.addEventListener("click", function() {
+    btn.style.width = "40%";
+    btn.style.padding = "5px 10px";
+    btn.style.backgroundColor = "#6F6F6F";
 });
+
 
 
 // yesBtn.addEventListener("click", () => {

@@ -53,7 +53,7 @@
     <input class="form__btn form__submit" type="submit" value="Добавить">
   </form>
 
-  <form class=' form__deleteAll' action="lib/deleteAll.php" method="post">
+  <form class='form__deleteAll' action="lib/deleteAll.php" method="post">
     <button class='form__btn btn__deleteAll' type="submit" value="">Удалить всё</button>
   </form>
   <table class="table">

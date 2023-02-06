@@ -62,10 +62,9 @@
         $queryAll = "SELECT * from `info` ";
         $all = mysqli_query($db, $queryAll);
         if (!$all) {
-            die("Error fetching data: " . mysqli_error($db));
+            die("Ошибка сбора данных");
         }
         $all = mysqli_fetch_all($all, MYSQLI_ASSOC);
-        if (!empty($all))
         ?>
     <thead class="table__head">
       <tr class="table__row">

@@ -18,13 +18,8 @@ require("lib/connect.php"); // Подключение "connect.php ", библи
 		die('Ошибка вывода');
 	}
 ?>
-<title>ID: <?= empty($one['id']) ? "Нет данных" : $one['id'] ?></title>
-
-
-
-
-
-<h1 class="title">ID: <?= empty($one['id']) ? "Нет данных" : $one['id'] ?></h1>
+<title>ID: <?= empty($one['id']) ? "ID не существует" : $one['id'] ?></title>
+<h1 class="title">ID: <?= empty($one['id']) ? "ID не существует" : $one['id'] ?></h1>
 <table class="table">
 
 	<thead class="table__head">

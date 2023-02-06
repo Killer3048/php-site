@@ -2,7 +2,7 @@
 // Подключение к базе данных
 require("connect.php");
 
-// Проверка, задан ли id в данных POST
+// Проверка, задан ли id в данных POST (то есть были ли переданы  в форме эти данные)
 if (isset($_POST['id'])) { 
 	$id = mysqli_real_escape_string($db, $_POST['id']); // Сохранение id из данных POST и экранирование его
 	$info = mysqli_real_escape_string($db, $_POST['info']); // Сохранение и экранирование info из данных POST

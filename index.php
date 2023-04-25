@@ -8,29 +8,33 @@
   <title>Adders with my god</title>
   <link rel="stylesheet" href="static/style.css">
   <link rel="icon" href="static/images/icon.png">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
+<?php session_start() ?> 
 <body class="body">
 
   <header class="header">
     <a href="#" class="header__logo"><img class="header__logo-image" src="static/images/logo.svg" alt="лого"></a>
     <nav class="header__nav">
-      <ul class="header__menu">
-        <li class="header__menu-item">
-          <a href="#" class="header__menu-link">Главная</a>
-        </li>
-        <li class="header__menu-item">
-          <a href="#" class="header__menu-link">О нас</a>
-        </li>
-        <li class="header__menu-item">
-          <a href="#" class="header__menu-link">Сервис</a>
-        </li>
-        <li class="header__menu-item">
-          <a href="#" class="header__menu-link">Контакты</a>
-        </li>
-      </ul>
-    </nav>
+  <ul class="header__menu">
+    <li class="header__menu-item">
+      <a href="/php-site" class="header__menu-link">Главная</a>
+    </li>
+    <li class="header__menu-item">
+      <a href="#" class="header__menu-link">О нас</a>
+    </li>
+    <li class="header__menu-item">
+      <a href="#" class="header__menu-link">Сервис</a>
+    </li>
+    <li class="header__menu-item">
+      <?php if (isset($_SESSION['email'])) { ?>
+        <a href="/php-site/lib/exit.php" class="header__menu-link">Выход</a>
+      <?php } else { ?>
+        <a href="/php-site/auth.php" class="header__menu-link">Авторизация</a>
+      <?php } ?>
+    </li>
+  </ul>
+</nav>
+
   </header>
 
  <!-- <section class='modal-container'>
@@ -54,7 +58,7 @@
   </form>
 
   <form class='form__deleteAll' action="lib/deleteAll.php" method="post">
-    <button class='form__btn btn__deleteAll' type="submit" value="">Удалить всё</button>
+    <input class='form__btn btn__deleteAll' type="submit" value="Удалить всё">
   </form>
   <table class="table">
     <?php
